@@ -1,6 +1,7 @@
-import {Component, View, bootstrap, provide} from 'angular2/angular2';
+import {Component, View, bootstrap} from 'angular2/angular2';
 import {HTTP_PROVIDERS} from 'angular2/http';
-import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {PeopleService} from './services/people.service';
+import {ClientFactory} from './services/client.factory';
 
 @Component({
 	selector: 'my-app'
@@ -9,19 +10,21 @@ import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2
 	template: `Welcome to the Angular 2 workshop`
 })
 class AppComponent {
-	constructor() {
-
+	constructor(peopleService: PeopleService) {
+		peopleService.json('mockdata/clients.json')
+			.subscribe(
+				clients => console.log(clients),
+				err => console.log(err)
+			);
 	}
 }
 
 const angularDependencies = [
-	HTTP_PROVIDERS,
-	ROUTER_PROVIDERS,
-	provide(LocationStrategy, { useClass: HashLocationStrategy })
+	HTTP_PROVIDERS
 ];
 
 const myDependencies = [
-
+	PeopleService,
+	ClientFactory
 ];
-bootstrap(AppComponent, [...angularDependencies, ...myDependencies];
-
+bootstrap(AppComponent, [...angularDependencies, ...myDependencies]);
