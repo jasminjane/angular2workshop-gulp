@@ -1,4 +1,5 @@
 import {Component, View, bootstrap, provide} from 'angular2/angular2';
+import {HTTP_PROVIDERS} from 'angular2/http';
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
 
 @Component({
@@ -14,11 +15,13 @@ class AppComponent {
 }
 
 const angularDependencies = [
-		ROUTER_PROVIDERS,
-		provide(LocationStrategy, { useClass: HashLocationStrategy })
-	],
-	myDependencies = [
+	HTTP_PROVIDERS,
+	ROUTER_PROVIDERS,
+	provide(LocationStrategy, { useClass: HashLocationStrategy })
+];
 
-	];
+const myDependencies = [
 
-bootstrap(AppComponent, [...angularDependencies, ...myDependencies]);
+];
+bootstrap(AppComponent, [...angularDependencies, ...myDependencies];
+
