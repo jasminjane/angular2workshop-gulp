@@ -3,8 +3,7 @@ const gulp = require('gulp'),
     ts  = require('gulp-typescript'),
     tsProject = ts.createProject('./src/tsconfig.json'),
     sourcemaps = require('gulp-sourcemaps'),
-    clean = require('rimraf'),
-    browserSync = require('browser-sync').create();
+    clean = require('rimraf');
 
 const dirs = {
     src: 'src',
@@ -57,15 +56,6 @@ gulp.task('ts-compile', function () {
         .pipe(ts(tsProject))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dirs.dist));
-});
-
-gulp.task('browsersync-connect', function () {
-    return browserSync.init({
-        server: {
-            proxy: "http://127.0.0.1:8080/public",
-        },
-        files: [tsFiles.dist]
-    });
 });
 
 gulp.task('watch-changes', function () {

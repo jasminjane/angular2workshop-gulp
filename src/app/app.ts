@@ -9,7 +9,7 @@ import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2
 })
 class AppComponent {
 	constructor() {
-		
+
 	}
 }
 
