@@ -1,12 +1,9 @@
 # angular2workshop (Gulp)
 
-Install
+**Install**
+_npm install_
 
-npm install
-
-
-Run
-
-npm run start
+**Run**
+_npm run start_
 
 gulp
