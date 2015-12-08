@@ -1,6 +1,6 @@
 import {Http, Response} from 'angular2/http';
 import {Injectable} from 'angular2/angular2';
-import {ClientFactory} from './client.factory';
+import {ClientFactory} from './client_factory';
 
 @Injectable()
 export class PeopleService {

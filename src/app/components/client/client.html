@@ -1,0 +1,18 @@
+<section id="clientList">
+    <h1>Clients:</h1>
+    <form>
+        <input type="text" #firstName>
+        <input type="text" #lastName>
+        <button (click)="add(firstName.value, lastName.value)">Create</button>
+    </form>
+    <ul>
+        <li *ng-for="#client of clients">
+            <client-profile [client]="client"
+                            [selected]="active == client"
+                            (remove)="remove($event)"
+                            (click)="active = client">
+
+            </client-profile>
+        </li>
+    </ul>
+</section>

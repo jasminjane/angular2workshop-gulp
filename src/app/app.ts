@@ -1,8 +1,8 @@
 import {Component, View, bootstrap} from 'angular2/angular2';
 import {HTTP_PROVIDERS} from 'angular2/http';
-import {PeopleService} from './services/people.service';
-import {ClientFactory} from './services/client.factory';
-import {ClientComponent} from './components/client/client.page';
+import {PeopleService} from './services/people';
+import {ClientFactory} from './services/client_factory';
+import {ClientComponent} from './components/client/client';
 
 @Component({
 	selector: 'my-app'
@@ -13,11 +13,11 @@ import {ClientComponent} from './components/client/client.page';
 })
 class AppComponent {
 	constructor(peopleService: PeopleService) {
-		peopleService.json('mockdata/clients.json')
+		/*peopleService.json('mockdata/clients.json')
 			.subscribe(
 				clients => console.log(clients),
 				err => console.log(err)
-			);
+			);*/
 	}
 }
 
@@ -29,4 +29,4 @@ const myDependencies = [
 	PeopleService,
 	ClientFactory
 ];
-bootstrap(AppComponent, [...angularDependencies, ...myDependencies]);
+bootstrap(AppComponent, [...angularDependencies, ...myDependencies]); //http://es6-features.org/#SpreadOperator

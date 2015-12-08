@@ -1,5 +1,5 @@
 import {Component, View, provide, Injectable} from 'angular2/angular2';
-import {PeopleService} from '../../services/people.service';
+import {PeopleService} from '../../services/people';
 import {Client} from '../../services/client';
 import {ClientProfile} from "../../shared_components/client_profile/client_profile";
 
@@ -7,21 +7,24 @@ import {ClientProfile} from "../../shared_components/client_profile/client_profi
 	selector: 'clients'
 })
 @View({
-	templateUrl: './app/components/client/client.page.html',
+	templateUrl: './app/components/client/client.html',
 	directives: [ClientProfile]
 })
 export class ClientComponent {
+	clientService: PeopleService;
 	clients: Client[];
-	constructor(public ClientService: PeopleService) {
-		ClientService.json('mockdata/clients.json')
+	active: Client;
+	constructor(peopleService: PeopleService) {
+		this.clientService = peopleService;
+		this.clientService.json('mockdata/clients.json')
 			.subscribe(
 				res => this.clients = res,
 				err => console.log(err)
 			);
 	}
 	add(first_name, last_name) {
-		//let newClient: Client = this.ClientService.create({ first_name, last_name });
-		//this.clients.push(newClient);
+		var newClient: Client = this.clientService.factory.create({ first_name, last_name }); // http://es6-features.org/#PropertyShorthand
+		this.clients.push(newClient);
 	}
 	remove(client) {
 		let index = this.clients.indexOf(client);
