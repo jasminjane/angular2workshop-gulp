@@ -13,7 +13,7 @@ _npm run start_
 _gulp_
 
 ## Assignment 1
-  * Create a Client class that contains the values of a [client](../blob/assignment_1/src/mockdata/clients.json)
+  * Create a Client class that contains the values of a [client](../assignment_1/src/mockdata/clients.json)
   * Create a service that can perform GET requests.
   * Let the service map the response to the correct format.
   * Let the service GET call return instantiated classes (
