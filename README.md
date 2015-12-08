@@ -13,11 +13,11 @@ _npm run start_
 _gulp_
 
 ## Assignment 1
-  * Create a Client class that contains the values of a [client](../assignment_1/src/mockdata/clients.json)
+  * Create a Client class that holds the values of a [Client](../assignment_1/src/mockdata/clients.json)
   * Create a service that can perform GET requests.
-  * Let the service map the response to the correct format.
-  * Let the service GET call return instantiated classes (
-
+  * Let the service GET call return instantiated classes (no plain JS objects).
+  * Let app.ts inject the created service and GET the [client mockdata](../assignment_1/src/mockdata/clients.json)
+  * app.ts should print [Client] or an error.
 
 ## Hints
   * [Http](https://angular.io/docs/ts/latest/api/http/Http-class.html)
