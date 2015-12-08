@@ -18,7 +18,8 @@ _gulp_
   * Let the service GET call return instantiated classes (no plain JS objects).
   * Let app.ts inject the created service and print the response/error of the GET [client mockdata](../assignment_1/src/mockdata/clients.json) request.
 
-  ** Test
+### Extra
+  * Create a Programmer class that can also hold an array of programming languages.
 
 ## Hints
   * [Class - ES6](https://angular.io/docs/ts/latest/api/core/Class-function.html)
