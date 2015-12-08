@@ -20,5 +20,6 @@ _gulp_
 
 
 ## Hints
+  * [Class](https://angular.io/docs/ts/latest/api/core/Class-function.html)
   * [Http](https://angular.io/docs/ts/latest/api/http/Http-class.html)
   * [ES6 Cheatsheet](http://es6-features.org/#Constants)
