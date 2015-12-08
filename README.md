@@ -14,12 +14,14 @@ _gulp_
 
 ## Assignment 1
   * Create a Client class that holds the values of a [Client](../assignment_1/src/mockdata/clients.json)
-  * Create a service that can perform GET requests.
-  * Let the service GET call return instantiated classes (no plain JS objects).
-  * Let app.ts inject the created service and print the response/error of the GET [client mockdata](../assignment_1/src/mockdata/clients.json) request.
+  * Create a PeopleService that can retrieve json files.
+  * Let the service return instantiated Client classes (no plain JS objects).
+  * Let app.ts inject the created service and print the response/error of the [client mockdata](../assignment_1/src/mockdata/clients.json) request.
+  * Create a ClientFactory class that has a create function which returns an instance of a Client.
+  * Refactor PeopleService so the ClientFactory class is injected like Http and refactor the response mapping of its request handling.
 
-### Extra
-  * Create a Programmer class that can also hold an array of programming languages.
+### Optional
+  * Create an abstract Person class as a base for the other people (inheritance).
 
 ## Hints
   * [Class - ES6](https://angular.io/docs/ts/latest/api/core/Class-function.html)
