@@ -16,6 +16,7 @@ class AppComponent {
 				clients => console.log(clients),
 				err => console.log(err)
 			);
+		//http://es6-features.org/#ExpressionBodies
 	}
 }
 

@@ -16,6 +16,7 @@ export class PeopleService {
 			.map(res => {
 				let people = [];
 				(<[any]>res).forEach(properties => people.push(this.factory.create(properties)));
+				//http://es6-features.org/#Lexicalthis
 				return people;
 			});
 	};
