@@ -18,4 +18,4 @@ Create a service that can GET the mock data files in the server directory.
 ### Hints
   * ES6 import/export
   * ES6 Classes
-  * [https://angular.io/docs/ts/latest/api/http/Http-class.html](Http docs)
+  * [Http docs](https://angular.io/docs/ts/latest/api/http/Http-class.html)
