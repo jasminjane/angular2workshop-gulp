@@ -1,12 +1,14 @@
 import {Component, View, provide, Injectable} from 'angular2/angular2';
 import {PeopleService} from '../../services/people.service';
 import {Client} from '../../services/client';
+import {ClientProfile} from "../../shared_components/client_profile/client_profile";
 
 @Component({
 	selector: 'clients'
 })
 @View({
-	templateUrl: './app/components/client/client.page.html'
+	templateUrl: './app/components/client/client.page.html',
+	directives: [ClientProfile]
 })
 export class ClientComponent {
 	clients: Client[];
@@ -22,7 +24,7 @@ export class ClientComponent {
 		//this.clients.push(newClient);
 	}
 	remove(client) {
-		//let index = this.clients.indexOf(client);
-		//this.clients.splice(index, 1);
+		let index = this.clients.indexOf(client);
+		this.clients.splice(index, 1);
 	}
 }
