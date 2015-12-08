@@ -4,13 +4,11 @@
 
 _npm install_
 
-**Run**
-
-Server
+**Run server**
 
 _npm run start_
 
-Compile/Watch
+**Compile/Watch**
 
 _gulp_
 
@@ -20,3 +18,4 @@ Create a service that can GET the mock data files in the server directory.
 ### Hints
   * ES6 import/export
   * ES6 Classes
+  * [https://angular.io/docs/ts/latest/api/http/Http-class.html](Http docs)
