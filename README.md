@@ -12,18 +12,15 @@ _npm run start_
 
 _gulp_
 
-## Assignment 1
-  * Create a Client class that holds the values of a [Client](../assignment_1/src/mockdata/clients.json)
-  * Create a PeopleService that can retrieve json files.
-  * Let the service return instantiated Client classes (no plain JS objects).
-  * Let app.ts inject the created service and print the response/error of the [client mockdata](../assignment_1/src/mockdata/clients.json) request.
-  * Create a ClientFactory class that has a create function which returns an instance of a Client.
-  * Refactor PeopleService so the ClientFactory class is injected like Http and refactor the response mapping of its request handling.
+## Assignment 2
+  * Create a web component (in app/components) that uses the PeopleService to get its Clients. (Similar: A1.x Page/Controller)
+  * Create a web component (in app/shared_components) that holds 1 client and visualizes its properties. (Similar: A1.x Directive restrict 'E')
+  * Use Angular 2 directives inside the page component to loop through Clients and insert each Client into a ClientProfile component.
+  * Realize CRUD functionality for the Clients list held by the page component, delete and update must be called by the ClientProfile itself.
 
-### Optional
-  * Create an abstract Person class as a base for the other people (inheritance).
+## HINTS
+  * [CheatSheet Angular 2](https://angular.io/cheatsheet)
+  * [CORE_DIRECTIVES](https://angular.io/docs/ts/latest/api/common/CORE_DIRECTIVES-const.html)
+  * [EventEmitter](https://angular.io/docs/ts/latest/api/core/EventEmitter-class.html)
 
-## Hints
-  * [Class - ES6](https://angular.io/docs/ts/latest/api/core/Class-function.html)
-  * [Http](https://angular.io/docs/ts/latest/api/http/Http-class.html)
-  * [ES6 Cheatsheet](http://es6-features.org/#Constants)
+
