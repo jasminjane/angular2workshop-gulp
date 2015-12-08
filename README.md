@@ -1,4 +1,4 @@
-# angular2workshop (Gulp)
+# Angular 2 workshop (Gulp)
 
 **Install**
 
