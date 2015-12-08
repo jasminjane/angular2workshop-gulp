@@ -4,7 +4,7 @@ import {Client} from '../../services/client';
 
 @Component({
 	selector: 'client-profile',
-	properties: ['client', 'selected'],
+	properties: ['client', 'selected']
 	//lifecycleHooks: [OnInit]
 })
 @View({
@@ -14,11 +14,12 @@ export class ClientProfile implements OnInit {
 	@Input() client: Client;
 	@Input() selected: boolean;
 	@Output() remove: EventEmitter<Client>;
+
 	edit: boolean;
 
 	constructor() {
-		this.edit = false;
 		this.remove  = new EventEmitter();
+		this.edit = false;
 	}
 	ngOnInit() {
 		console.log(this.client);

@@ -1,11 +1,13 @@
-<h3>{{client.first_name}} {{client.last_name}}</h3>
-<div *ng-if="!edit && selected">
-    <br />
-    <button (click)="edit = true">Edit</button>
-    <button (click)="remove.emit(client)">Remove</button>
-</div>
-<form *ng-if="edit == true && selected">
-    <input [(ng-model)]="client.first_name">
-    <input [(ng-model)]="client.last_name">
-    <button type="submit" (click)="edit = false">Ok</button>
-</form>
+<h3 class="details">{{client.first_name}} {{client.last_name}}</h3>
+<section *ng-if="selected">
+    <div *ng-if="!edit">
+        <br />
+        <button (click)="edit = true">Edit</button>
+        <button (click)="remove.emit(client)">Remove</button>
+    </div>
+    <form *ng-if="edit">
+        <input [(ng-model)]="client.first_name">
+        <input [(ng-model)]="client.last_name">
+        <button type="submit" (click)="edit = false">Ok</button>
+    </form>
+</section>

@@ -12,15 +12,15 @@ const dirs = {
 
 const tsFiles = {
     src: `${dirs.src}/**/*.ts`,
-dist: `${dirs.dist}/**/*.js`
+    dist: `${dirs.dist}/**/*.js`
 }
 const htmlFiles = {
     src: `${dirs.src}/**/*.html`,
-dist: `${dirs.dist}/**/*.html`
+    dist: `${dirs.dist}/**/*.html`
 }
 const cssFiles = {
     src: `${dirs.src}/**/*.css`,
-dist: `${dirs.dist}/**/*.css`
+    dist: `${dirs.dist}/**/*.css`
 }
 
 const mockData = {
