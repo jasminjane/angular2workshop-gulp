@@ -4,14 +4,9 @@
 
 _npm install_
 
-**Run server**
+**Run**
 
-_npm run start_
-
-
-**Compile/Watch**
-
-_gulp_
+_gulp serve_
 
 ## Assignment 1
   * Create a Client class that holds the values of a [Client](../assignment_1/src/mockdata/clients.json)

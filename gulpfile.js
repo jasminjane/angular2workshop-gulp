@@ -14,20 +14,30 @@ const tsFiles = {
     src: `${dirs.src}/**/*.ts`,
     dist: `${dirs.dist}/**/*.js`
 }
-var test = `ds`;
 const htmlFiles = {
-    src: `${dirs.src}/**/*.html`
+    src: `${dirs.src}/**/*.html`,
+    dist: `${dirs.dist}/**/*.html`
 }
 const cssFiles = {
-    src: `${dirs.src}/**/*.css`
+    src: `${dirs.src}/**/*.css`,
+    dist: `${dirs.dist}/**/*.css`
 }
 
 const mockData = {
-    src: [`${dirs.src}/**/*.json`, '!src/app/tsconfig.json']
+    src: [`${dirs.src}/mockdata/*.json`],
+    dist: `${dirs.dist}/mockdata/`
 }
 
 gulp.task('default', function () {
-    run('clean', 'html-copy', 'css-copy', 'ts-compile', 'json-copy', 'watch-changes');
+    run('serve');
+});
+
+gulp.task('build', function (cb) {
+    run('clean', 'html-copy', 'css-copy', 'ts-compile', 'json-copy', cb);
+});
+
+gulp.task('serve', ['build'], function () {
+    run('watch-changes', 'server');
 });
 
 gulp.task('clean', function (cb) {
@@ -55,6 +65,14 @@ gulp.task('ts-compile', function () {
         .pipe(ts(tsProject))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dirs.dist));
+});
+gulp.task('server', function () {
+    var liveServer = require("live-server");
+    var params = {
+        open: '/public',
+        ignore: 'src'
+    };
+    liveServer.start(params);
 });
 
 gulp.task('watch-changes', function () {

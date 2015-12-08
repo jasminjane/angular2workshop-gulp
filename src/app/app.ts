@@ -8,9 +8,7 @@ import {HTTP_PROVIDERS} from 'angular2/http';
 	template: `Welcome to the Angular 2 workshop`
 })
 class AppComponent {
-	constructor() {
-
-	}
+	constructor() {}
 }
 
 const angularDependencies = [
