@@ -50,7 +50,6 @@ gulp.task('json-copy', function () {
 });
 
 gulp.task('ts-compile', function () {
-    console.log("Compile")
     gulp.src(tsFiles.src)
         .pipe(sourcemaps.init())
         .pipe(ts(tsProject))

@@ -1,4 +1,4 @@
-import {Component, View, bootstrap, provide, Type} from 'angular2/angular2';
+import {Component, View, bootstrap, provide} from 'angular2/angular2';
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
 
 @Component({
@@ -13,7 +13,12 @@ class AppComponent {
 	}
 }
 
-const angularDependencies = [ ROUTER_PROVIDERS, provide(LocationStrategy, { useClass: HashLocationStrategy }) ],
-	myDependencies = [];
-bootstrap(<Type>AppComponent, [...angularDependencies, ...myDependencies]);
+const angularDependencies = [
+		ROUTER_PROVIDERS,
+		provide(LocationStrategy, { useClass: HashLocationStrategy })
+	],
+	myDependencies = [
 
+	];
+
+bootstrap(AppComponent, [...angularDependencies, ...myDependencies]);
