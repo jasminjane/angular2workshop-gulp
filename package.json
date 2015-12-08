@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "tsc": "tsc -p src -w",
-    "start": "live-server --open=public --ignore=src"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
