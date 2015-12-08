@@ -1,12 +1,18 @@
-# angular2workshop (Gulp)
+# Angular 2 workshop (Gulp)
 
-Install
+**Install**
 
-npm install
+_npm install_
 
+**Run**
 
-Run
+_npm run start_
 
-npm run start
+_gulp_
 
-gulp
+## Assignment 1
+Create a service that can GET the mock data files in the server directory.
+
+### Hints
+  * ES6 import/export
+  * ES6 Classes
