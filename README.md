@@ -17,6 +17,7 @@ _gulp_
   * Create a web component (in app/shared_components) that holds 1 client and visualizes its properties. (Similar: A1.x Directive restrict 'E')
   * Use Angular 2 directives inside the page component to loop through Clients and insert each Client into a ClientProfile component.
   * Realize CRUD functionality for the Clients list held by the page component, delete and update must be called by the ClientProfile itself.
+  * For editing and creating Clients, use local variables inside the template.
 
 ## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
