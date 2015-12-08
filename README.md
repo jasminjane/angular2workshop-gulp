@@ -9,3 +9,6 @@ _npm install_
 _npm run start_
 
 _gulp_
+
+## Assignment 1
+Create a service that can GET the mock data files in the server directory.
