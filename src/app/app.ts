@@ -18,5 +18,5 @@ const angularDependencies = [
 const myDependencies = [
 
 ];
-bootstrap(AppComponent, [...angularDependencies, ...myDependencies]);
+bootstrap(AppComponent, [...angularDependencies, ...myDependencies]); //http://es6-features.org/#SpreadOperator
 
