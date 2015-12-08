@@ -20,5 +20,5 @@ const angularDependencies = [
 const myDependencies = [
 
 ];
-bootstrap(AppComponent, [...angularDependencies, ...myDependencies];
+bootstrap(AppComponent, [...angularDependencies, ...myDependencies]);
 
