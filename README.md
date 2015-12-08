@@ -5,9 +5,10 @@
 _npm install_
 
 **Run**
-
+Server
 _npm run start_
 
+Compile/Watch
 _gulp_
 
 ## Assignment 1
