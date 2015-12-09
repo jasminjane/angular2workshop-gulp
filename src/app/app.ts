@@ -8,10 +8,7 @@ import {ClientComponent} from './components/client/client';
 	selector: 'my-app'
 })
 @View({
-	template: `
-		Welcome to the Angular 2 workshop
-		<clients></clients>
-	`,
+	template: `<h3>Welcome to the Angular 2 workshop</h3><clients></clients>`,
 	directives: [ClientComponent]
 })
 class AppComponent {
@@ -26,4 +23,5 @@ const myDependencies = [
 	PeopleService,
 	ClientFactory
 ];
+
 bootstrap(AppComponent, [...angularDependencies, ...myDependencies]); //http://es6-features.org/#SpreadOperator

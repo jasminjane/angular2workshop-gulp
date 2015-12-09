@@ -13,14 +13,14 @@ _npm run start_
 _gulp_
 
 ## Assignment 2
-  * Create a web component (in app/components) that uses the PeopleService to get its Clients. (Similar: A1.x Page/Controller)
-  * Create a web component (in app/shared_components) that holds 1 client and visualizes its properties. (Similar: A1.x Directive restrict 'E')
-  * Use Angular 2 directives inside the page component to loop through Clients and insert each Client into a ClientProfile component.
-  * Realize CRUD functionality for the Clients list held by the page component, delete and update must be called by the ClientProfile itself.
+  * Create a new component (app/components) that will hold Programmers.
+  * Set up the new Router and link your components to url's.
+  * Create a ProgrammerProfile that uses/extends ClientProfile.
+  * Create a Programmer class that extends Person (or Client) and a ProgrammerFactory.
+  * Let the ProgrammerComponent inject PeopleService and provide a ProgrammerFactory through dependency injection.
+  * Visualize the programmers with ProgrammerProfiles.
+
 
 ## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
-  * [CORE_DIRECTIVES](https://angular.io/docs/ts/latest/api/common/CORE_DIRECTIVES-const.html)
-  * [EventEmitter](https://angular.io/docs/ts/latest/api/core/EventEmitter-class.html)
-
-
+  * [LocaionStrategy](https://angular.io/docs/ts/latest/api/router/HashLocationStrategy-class.html)
