@@ -1,33 +1,43 @@
-const gulp = require('gulp'),
+var gulp = require('gulp'),
     run = require('run-sequence'),
     ts  = require('gulp-typescript'),
     tsProject = ts.createProject('./src/tsconfig.json'),
     sourcemaps = require('gulp-sourcemaps'),
-    clean = require('rimraf')
+    clean = require('rimraf');
 
-const dirs = {
+var dirs = {
     src: 'src',
     dist: 'public'
 };
 
-const tsFiles = {
-    src: `${dirs.src}/**/*.ts`,
-    dist: `${dirs.dist}/**/*.js`
-}
-var test = `ds`;
-const htmlFiles = {
-    src: `${dirs.src}/**/*.html`
-}
-const cssFiles = {
-    src: `${dirs.src}/**/*.css`
-}
+var tsFiles = {
+    src: dirs.src + '/**/*.ts',
+    dist: dirs.dist + '/**/*.js'
+};
+var htmlFiles = {
+    src: dirs.src + '/**/*.html',
+    dist: dirs.dist + '/**/*.html'
+};
+var cssFiles = {
+    src: dirs.src + '/**/*.css',
+    dist: dirs.dist + '/**/*.css'
+};
 
-const mockData = {
-    src: [`${dirs.src}/**/*.json`, '!src/app/tsconfig.json']
+var mockData = {
+    src: dirs.src + '/mockdata/*.json',
+    dist: dirs.dist + '/mockdata/'
 }
 
 gulp.task('default', function () {
-    run('clean', 'html-copy', 'css-copy', 'ts-compile', 'json-copy', 'watch-changes');
+    run('serve');
+});
+
+gulp.task('build', function (cb) {
+    run('clean', 'html-copy', 'css-copy', 'ts-compile', 'json-copy', cb);
+});
+
+gulp.task('serve', ['build'], function () {
+    run('watch-changes', 'server');
 });
 
 gulp.task('clean', function (cb) {
@@ -46,25 +56,23 @@ gulp.task('css-copy', function() {
 
 gulp.task('json-copy', function () {
     gulp.src(mockData.src)
-        .pipe(gulp.dest(dirs.dist));
+        .pipe(gulp.dest(mockData.dist));
 });
 
 gulp.task('ts-compile', function () {
-    console.log("Compile")
     gulp.src(tsFiles.src)
         .pipe(sourcemaps.init())
         .pipe(ts(tsProject))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dirs.dist));
 });
-
-gulp.task('browsersync-connect', function () {
-    return browserSync.init({
-        server: {
-            proxy: "http://127.0.0.1:8080/public",
-        },
-        files: [tsFiles.dist]
-    });
+gulp.task('server', function () {
+    var liveServer = require("live-server");
+    var params = {
+        open: '/public',
+        ignore: 'src'
+    };
+    liveServer.start(params);
 });
 
 gulp.task('watch-changes', function () {
@@ -72,4 +80,3 @@ gulp.task('watch-changes', function () {
     gulp.watch(htmlFiles.src, ['html-copy']);
     gulp.watch(cssFiles.src, ['css-copy']);
 });
-

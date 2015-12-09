@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc -p src -w",
-    "start": "live-server --open=public --ignore=src"
+    "serve": "gulp serve"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +15,6 @@
     "systemjs": "0.19.2"
   },
   "devDependencies": {
-    "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.10.0",
