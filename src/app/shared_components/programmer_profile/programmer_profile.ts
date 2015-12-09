@@ -2,11 +2,9 @@ import {Component, View, provide, Input, OnInit, Output, EventEmitter} from 'ang
 import {Programmer} from '../../services/programmer';
 import {ClientProfile} from "../client_profile/client_profile";
 
-
 @Component({
 	selector: 'programmer-profile',
-	properties: ['client', 'selected']
-	//lifecycleHooks: [OnInit]
+	properties: ['programmer', 'selected']
 })
 @View({
 	templateUrl: './app/shared_components/programmer_profile/programmer_profile.html',
@@ -14,8 +12,10 @@ import {ClientProfile} from "../client_profile/client_profile";
 })
 export class ProgrammerProfile {
 	@Input() programmer: Programmer;
+	@Input() selected: boolean;
 	edit: boolean = false;
-	remove: EventEmitter<Programmer> = new EventEmitter();
+
+	@Output() remove: EventEmitter<Programmer> = new EventEmitter();
 	removeLanguage(index) {
 		this.programmer.languages.splice(index, 1);
 	}

@@ -16,8 +16,7 @@ import {ProgrammerComponent} from './components/programmer/programmer';
 })
 @RouteConfig([
 	{ path: '/clients', component: ClientComponent, as: 'Clients' },
-	{ path: '/programmers', component: ProgrammerComponent, as: 'Programmers' },
-	//{ path: '/combined', component: Combined, as: 'Combined' }
+	{ path: '/programmers', component: ProgrammerComponent, as: 'Programmers' }
 ])
 class AppComponent {
 	constructor() {}

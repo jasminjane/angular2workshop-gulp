@@ -1,5 +1,5 @@
 <div class="programmer-profile">
-    <client-profile class="client-profile" [client]="programmer" (remove)="remove.emit($event)"></client-profile>
+    <client-profile class="client-profile" [client]="programmer" (remove)="remove.emit(programmer)" [selected]="selected"></client-profile>
     <ul class="languages">
         <li *ng-for="#language of programmer.languages;#index = index;">
             <span *ng-if="edit == false">{{language}}</span>

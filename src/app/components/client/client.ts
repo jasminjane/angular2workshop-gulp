@@ -13,7 +13,6 @@ import {ClientProfile} from "../../shared_components/client_profile/client_profi
 export class ClientComponent {
 	clientService: PeopleService;
 	clients: Client[];
-	active: Client;
 	constructor(peopleService: PeopleService) {
 		this.clientService = peopleService;
 		this.clientService.json('mockdata/clients.json')

@@ -2,7 +2,9 @@
     <h1>Programmers:</h1>
     <div *ng-for="#programmer of programmers">
         <programmer-profile [programmer]="programmer"
-                            (remove)="remove($event)">
+                            (remove)="remove($event)"
+                            [selected]="active == programmer"
+                            (click)="active = programmer">
 
         </programmer-profile>
     </div>

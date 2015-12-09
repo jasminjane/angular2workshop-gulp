@@ -20,4 +20,4 @@ _npm run serve_
 
 ## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
-  * [LocaionStrategy](https://angular.io/docs/ts/latest/api/router/HashLocationStrategy-class.html)
+  * [LocationStrategy](https://angular.io/docs/ts/latest/api/router/HashLocationStrategy-class.html)
