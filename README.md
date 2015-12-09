@@ -19,7 +19,7 @@ _npm run serve_
 ## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
   * [CORE_DIRECTIVES](https://angular.io/docs/ts/latest/api/common/CORE_DIRECTIVES-const.html)
-  * [Component Lifecycle](http://learnangular2.com/lifecycle/)
+  * [Component Lifecycle](https://angular.io/docs/ts/latest/api/core/OnInit-interface.html)
   * [EventEmitter](https://angular.io/docs/ts/latest/api/core/EventEmitter-class.html)
 
 
