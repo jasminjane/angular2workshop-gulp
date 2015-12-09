@@ -1,31 +1,31 @@
-const gulp = require('gulp'),
+var gulp = require('gulp'),
     run = require('run-sequence'),
     ts  = require('gulp-typescript'),
     tsProject = ts.createProject('./src/tsconfig.json'),
     sourcemaps = require('gulp-sourcemaps'),
     clean = require('rimraf');
 
-const dirs = {
+var dirs = {
     src: 'src',
     dist: 'public'
 };
 
-const tsFiles = {
-    src: `${dirs.src}/**/*.ts`,
-    dist: `${dirs.dist}/**/*.js`
-}
-const htmlFiles = {
-    src: `${dirs.src}/**/*.html`,
-    dist: `${dirs.dist}/**/*.html`
-}
-const cssFiles = {
-    src: `${dirs.src}/**/*.css`,
-    dist: `${dirs.dist}/**/*.css`
-}
+var tsFiles = {
+    src: dirs.src + '/**/*.ts',
+    dist: dirs.dist + '/**/*.js'
+};
+var htmlFiles = {
+    src: dirs.src + '/**/*.html',
+    dist: dirs.dist + '/**/*.html'
+};
+var cssFiles = {
+    src: dirs.src + '/**/*.css',
+    dist: dirs.dist + '/**/*.css'
+};
 
-const mockData = {
-    src: [`${dirs.src}/mockdata/*.json`],
-    dist: `${dirs.dist}/mockdata/`
+var mockData = {
+    src: dirs.src + '/mockdata/*.json',
+    dist: dirs.dist + '/mockdata/'
 }
 
 gulp.task('default', function () {

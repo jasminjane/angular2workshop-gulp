@@ -1,5 +1,5 @@
 import {Component, View, provide, Injectable} from 'angular2/angular2';
-import {PeopleService} from '../../services/people';
+import {PeopleService} from '../../services/people_service';
 import {Client} from '../../services/client';
 import {ClientProfile} from "../../shared_components/client_profile/client_profile";
 

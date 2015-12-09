@@ -1,6 +1,6 @@
 import {Component, View, bootstrap} from 'angular2/angular2';
 import {HTTP_PROVIDERS} from 'angular2/http';
-import {PeopleService} from './services/people';
+import {PeopleService} from './services/people_service';
 import {ClientFactory} from './services/client_factory';
 import {ClientComponent} from './components/client/client';
 
