@@ -4,7 +4,7 @@
 
 _npm install_
 
-**Run server**
+**Run**
 
 _npm run serve_
 
