@@ -6,13 +6,10 @@ _npm install_
 
 **Run server**
 
-_npm run start_
+_npm run serve_
 
-**Compile/Watch**
 
-_gulp_
-
-## Assignment 2
+## Assignment 3
   * Create a new component (app/components) that will hold Programmers.
   * Set up the new Router and link your components to url's.
   * Create a ProgrammerProfile that uses/extends ClientProfile.
