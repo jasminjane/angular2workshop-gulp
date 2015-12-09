@@ -16,16 +16,24 @@ dist: `${dirs.dist}/**/*.js`
 }
 const htmlFiles = {
     src: `${dirs.src}/**/*.html`,
+<<<<<<< HEAD
 dist: `${dirs.dist}/**/*.html`
 }
 const cssFiles = {
     src: `${dirs.src}/**/*.css`,
 dist: `${dirs.dist}/**/*.css`
+=======
+    dist: `${dirs.dist}/**/*.html`
+}
+const cssFiles = {
+    src: `${dirs.src}/**/*.css`,
+    dist: `${dirs.dist}/**/*.css`
 }
 
 const mockData = {
     src: [`${dirs.src}/mockdata/*.json`],
 dist: `${dirs.dist}/mockdata/`
+    dist: `${dirs.dist}/mockdata/`
 }
 
 gulp.task('default', function () {
