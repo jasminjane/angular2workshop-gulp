@@ -21,6 +21,6 @@ _npm run serve_
   * [CORE_DIRECTIVES](https://angular.io/docs/ts/latest/api/common/CORE_DIRECTIVES-const.html)
   * [Component Lifecycle](https://angular.io/docs/ts/latest/api/core/OnInit-interface.html)
   * [EventEmitter](https://angular.io/docs/ts/latest/api/core/EventEmitter-class.html)
-  * [Input, Outpu](http://victorsavkin.com/post/119943127151/angular-2-template-syntax)
+  * [Input, Output](http://victorsavkin.com/post/119943127151/angular-2-template-syntax)
 
 
