@@ -6,11 +6,7 @@ _npm install_
 
 **Run server**
 
-_npm run start_
-
-**Compile/Watch**
-
-_gulp_
+_npm run serve_
 
 ## Assignment 2
   * Create a web component (in app/components) that uses the PeopleService to get its Clients. (Similar: A1.x Page/Controller)
