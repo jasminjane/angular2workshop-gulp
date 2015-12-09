@@ -3,8 +3,7 @@ const gulp = require('gulp'),
     ts  = require('gulp-typescript'),
     tsProject = ts.createProject('./src/tsconfig.json'),
     sourcemaps = require('gulp-sourcemaps'),
-    clean = require('rimraf'),
-    browserSync = require('browser-sync').create();
+    clean = require('rimraf')
 
 const dirs = {
     src: 'src',

@@ -26,7 +26,6 @@ import {CombinedComponent as Combined} from './components/combined/combined';
 ])
 class AppComponent {
 	constructor() {
-
 	}
 }
 
