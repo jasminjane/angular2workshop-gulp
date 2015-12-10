@@ -16,7 +16,7 @@ _npm run serve_
   * Realize CRUD functionality for the Clients list held by the ClientComponent, delete and update must be called/emitted by the ClientProfile.
   * For editing and creating Clients, use local variables inside the template.
 
-```javacript
+```javascript
 @Component({
   selector: 'my-component'
 })
