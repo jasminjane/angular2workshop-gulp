@@ -17,6 +17,7 @@ _npm run serve_
   * Let the ProgrammerComponent inject PeopleService and provide a ProgrammerFactory through dependency injection.
   * Visualize the programmers with ProgrammerProfiles.
 
+## HINTS
 
 ```javascript
 @Injectable()
@@ -46,6 +47,5 @@ bootstrap(AppComponent, [HTTP_PROVIDERS, MyService]);
 
 ```
 
-## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
   * [LocationStrategy](https://angular.io/docs/ts/latest/api/router/HashLocationStrategy-class.html)
