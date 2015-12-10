@@ -34,13 +34,43 @@ export class MyComponent {
 }
 
 ```
-###A1
+###A1.x
 ```
 <directive title="Literal">
 <directive title="expression">
 <directive title="{{interpolate}}">
 
 <directive select="onSelect($event)">
+
+<input  value="{{myValue}}" 
+        ng-class="{className: condition}"
+        ng-hide="expression">
+
+
+<!-- Two way binding -->
+<input ng-model="person.first_name">
+```
+
+```
+###A2.0
+```
+<component title="Literal">
+<component [title]="expression">
+
+
+<component (select)="onSelect($event)">
+
+<input  [value]="myValue"
+        [class.className]="condition"
+        [hidden]="expression">
+
+
+<!-- Two way binding -->
+<input [(ng-model)]="person.first_name">
+
+<!-- One way binding -->
+<input [value]="person.first_name" #firstName>
+<button (click)="person.first_name = firstName.value">
 ```
 
 ## HINTS
