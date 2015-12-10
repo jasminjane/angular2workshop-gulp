@@ -10,8 +10,12 @@ import {ProgrammerComponent} from './components/programmer/programmer';
 	selector: 'my-app'
 })
 @View({
-	template: `<h3>Welcome to the Angular 2 workshop</h3>
-	<router-outlet></router-outlet>`,
+	template: `
+		<h3>Welcome to the Angular 2 workshop</h3>
+		<a [router-link]="['./Clients']">Clients</a>
+		<a [router-link]="['./Programmers']">Programmers</a>
+		<router-outlet></router-outlet>
+	`,
 	directives: [RouterOutlet, RouterLink]
 })
 @RouteConfig([
