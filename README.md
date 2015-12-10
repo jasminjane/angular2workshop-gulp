@@ -9,12 +9,31 @@ _npm install_
 _npm run serve_
 
 ## Assignment 2
-  * Create a web component (in app/components) that uses the PeopleService to get its Clients. (Similar: A1.x Page/Controller)
-  * Create a web component (in app/shared_components) that holds 1 client and visualizes its properties. (Similar: A1.x Directive restrict 'E')
-  * Use Angular 2 directives inside the page component to loop through Clients and insert each Client into a ClientProfile component.
+  * Create a web component named ClientComponent (in app/components) that uses the PeopleService to get its Clients. (Similar: A1.x Controller)
+  * Create a web component named ClientProfile (in app/shared_components) that holds 1 client and visualizes its properties. (Similar: A1.x Directive restrict 'E')
+  * Use Angular 2 directives inside the ClientComponent to loop through Clients and insert each Client into a ClientProfile component.
   * Let ClientProfile log its Client on init.
-  * Realize CRUD functionality for the Clients list held by the page component, delete and update must be called by the ClientProfile itself.
+  * Realize CRUD functionality for the Clients list held by the ClientComponent, delete and update must be called/emitted by the ClientProfile.
   * For editing and creating Clients, use local variables inside the template.
+
+```javacript
+@Component({
+  selector: 'my-component'
+})
+@View({
+  template: `<div (click)="select.emit(message)">{{message}}</div>`
+})
+export class MyComponent {
+  message: string;
+  @Output select: EventEmitter<string>;
+  //@Input ....
+  constructor() {
+    this.message = 'Click here!';
+    this.select = new EventEmitter<string>()
+  }
+}
+
+```
 
 ## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
