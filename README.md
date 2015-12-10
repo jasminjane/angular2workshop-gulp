@@ -34,6 +34,13 @@ export class MyComponent {
 }
 
 ```
+###A1
+<directive title="Literal">
+<directive title="expression">
+<directive title="{{interpolate}}">
+
+<directive select="onSelect($event)">
+
 
 ## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
