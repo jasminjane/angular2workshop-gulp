@@ -34,6 +34,8 @@ export class MyComponent {
 }
 
 ```
+## HINTS
+
 ###A1.x
 ```
 <directive title="Literal">
@@ -72,7 +74,6 @@ export class MyComponent {
 <button (click)="person.first_name = firstName.value">
 ```
 
-## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
   * [CORE_DIRECTIVES](https://angular.io/docs/ts/latest/api/common/CORE_DIRECTIVES-const.html)
   * [Component Lifecycle](https://angular.io/docs/ts/latest/api/core/OnInit-interface.html)
