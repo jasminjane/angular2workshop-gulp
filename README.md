@@ -29,8 +29,6 @@ export class MyService {
   }
 }
 
-var AppComponent = Type;
-
 ```
 App
 ```javascript
