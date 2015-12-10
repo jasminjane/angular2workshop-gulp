@@ -16,6 +16,8 @@ _npm run serve_
   * Realize CRUD functionality for the Clients list held by the ClientComponent, delete and update must be called/emitted by the ClientProfile.
   * For creating Clients use local variables inside the template and for updating use two way binding.
 
+## HINTS
+
 ```javascript
 @Component({
   selector: 'my-component'
@@ -34,7 +36,6 @@ export class MyComponent {
 }
 
 ```
-## HINTS
 
 ###A1.x
 ```
