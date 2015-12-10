@@ -22,19 +22,19 @@ _npm run serve_
 ## Hints
 Service
 ```javascript
-@Injectable()
-    export class MyService {
-      constructor(dep: Dependency) {
-        console.log(dep)
-      }
-    }
+@Injectable() //<-- Only when other dependencies (this case dep: Dependency) have to be resolved
+export class MyService {
+  constructor(dep: Dependency) {
+    console.log(dep)
+  }
+}
 
-    var AppComponent = Type;
+var AppComponent = Type;
 
 ```
 App
 ```javascript
-    bootstrap(AppComponent, [MyService, Dependency]);
+bootstrap(AppComponent, [MyService, Dependency]);
 ```
 
 
