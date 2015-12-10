@@ -1,3 +1,3 @@
 # Angular 2 workshop (Gulp)
 
-[Assignment 1](../assignment_1)
+[Assignment 1](../../tree/assignment_1)
