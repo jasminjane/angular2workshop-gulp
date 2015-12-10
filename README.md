@@ -47,5 +47,18 @@ bootstrap(AppComponent, [HTTP_PROVIDERS, MyService]);
 
 ```
 
+RouteConfig (domain/#/path1 || domain/#/path2)
+```javascript
+@RouteConfig([
+  { path: '/path1', component: Component1, as: 'Component1' },
+  { path: '/path2', component: Component2, as: 'Component2' }
+])
+
+//App.ts inject ROUTER_PROVIDERS, LocationStrategy needs to be set, so we provide a strategy.
+bootstrap(AppComponent, [ROUTER_PROVIDERS,
+  provide(LocationStrategy, { useClass: HashLocationStrategy }]));
+
+```
+
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
-  * [LocationStrategy](https://angular.io/docs/ts/latest/api/router/HashLocationStrategy-class.html)
+  * [Router](https://angular.io/docs/ts/latest/api/router/HashLocationStrategy-class.html)
