@@ -18,6 +18,34 @@ _npm run serve_
   * Visualize the programmers with ProgrammerProfiles.
 
 
+```javascript
+@Injectable()
+export class MyService {
+  constructor(dep: Dependency) {
+    console.log(dep)
+  }
+}
+```
+
+```javascript
+@Component({
+  selector: 'my-app',
+  providers: [
+    MyService,
+    provide(Dependency, { useClass: DifferentDependency })
+  ]
+})
+@View({
+  template: `<div>Provide example}</div>`
+})
+export class AppComponent {
+  constructor(myService: MyService) {}
+}
+
+bootstrap(AppComponent, [HTTP_PROVIDERS, MyService]);
+
+```
+
 ## HINTS
   * [CheatSheet Angular 2](https://angular.io/cheatsheet)
   * [LocationStrategy](https://angular.io/docs/ts/latest/api/router/HashLocationStrategy-class.html)
