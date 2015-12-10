@@ -19,6 +19,11 @@ _npm run serve_
 ### Optional
   * Create an abstract Person class as a base for the other people (inheritance).
 
+```javascript
+var s = "JavaScript syntax highlighting";
+```
+
+
 ## Hints
   * [Class - ES6](https://angular.io/docs/ts/latest/api/core/Class-function.html)
   * [Http](https://angular.io/docs/ts/latest/api/http/Http-class.html)
