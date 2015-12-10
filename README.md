@@ -49,7 +49,6 @@ export class MyComponent {
 
 <!-- Two way binding -->
 <input ng-model="person.first_name" />
-```
 
 ```
 ###A2.0
