@@ -10,7 +10,7 @@ _npm run serve_
 
 
 ## Assignment 3
-  * Create a new component (app/components) that will hold Programmers.
+  * Create a new component named ProgrammerComponent (app/components) that will hold Programmers.
   * Set up the new Router and link your components to url's.
   * Create a ProgrammerProfile that uses/extends ClientProfile.
   * Create a Programmer class that extends Person (or Client) and a ProgrammerFactory.
