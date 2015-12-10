@@ -14,7 +14,7 @@ _npm run serve_
   * Use Angular 2 directives inside the ClientComponent to loop through Clients and insert each Client into a ClientProfile component.
   * Let ClientProfile log its Client on init.
   * Realize CRUD functionality for the Clients list held by the ClientComponent, delete and update must be called/emitted by the ClientProfile.
-  * For editing and creating Clients, use local variables inside the template.
+  * For creating Clients use local variables inside the template and for updating use two way binding.
 
 ```javascript
 @Component({
